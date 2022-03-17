@@ -71,7 +71,7 @@ button:focus,
 .button:hover,
 .button:focus {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .header-logo {
@@ -85,12 +85,34 @@ button:focus,
   border-radius: 50%;
 }
 
+/* Page footer */
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
+  line-height: 10px;
 }
+
+.social-media {
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 30px;
+  margin: 0 auto;
+}
+
+
 
 .profile {
   max-width: 700px;
@@ -109,6 +131,9 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .page-header__item {
@@ -254,21 +279,155 @@ button:focus,
   animation: 25s cloud-move-reverse infinite alternate linear;
 }
 
-.contact-page {
-  margin: 35px;
+/* Contact page */
+
+.contact-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  letter-spacing: 6px;
+
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 50px 40px;
+  position: relative;
+  max-width: 840px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 10px black;
 }
 
 .contact-page__form {
-  margin-top: 20px;
+  float: left;
   max-width: 400px;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--primary-color);
-  box-sizing: border-box;
+.form-group {
+  background-color: ;
+  color: ;
+  border: 1.5px solid black;
+  width: 400px;
   margin-bottom: 10px;
-  resize: vertical;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+  line-height: 15px;
+}
+
+.send-button {
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 400px;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.bi-send {
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+.direct-contact {
+  max-width: 400px;
+}
+
+.contact-list {
+  list-style-type: none;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.contact-list_item {
+  line-height: 2;
+}
+
+.contact-text {
+  letter-spacing: 1.5px;
+}
+
+.contact-text a:hover {
+  color: #489c79;
+}
+
+.social-media-list {
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 60px;
+  margin: 12px 3px;
+}
+
+.bi-github, .bi-twitter, .bi-linkedin {
+  font-size: 25px;
+}
+
+/* Media query contact page */
+
+@media screen and (max-width: 780px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+  }
+
+  .direct-contact,
+  .contact-page__form {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .form-group {
+    margin: 0 auto;
+    max-width: 300px;
+    margin-bottom: 8px;
+  }
+
+  .send-button {
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .direct-contact {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  .contact-list {
+    padding-left: 10px;
+    padding-right: 1px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .contact {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
 }
