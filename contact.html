@@ -10,10 +10,10 @@
 	<link rel="shortcut icon" type="image/ico" href="./img/favicon-32X32.png">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<header class=page-header>
+	<header class="page-header">
 		<img src="img/logo.png" alt="logo" class="page-header__item header-logo">
 		<nav class="main-navigation page-header__item">
 			<ul role="menubar" class="navigation-list">
@@ -33,38 +33,55 @@
 		</nav>
 	</header>
 	<div class="contact-page">
-		<h1>Contact</h1>
-		<div>
-			Laura Schou<br>
-			Copenhagen<br>
-			Denmark<br>
-			<br>
-			Tel <a href="tel:+4521467203">+45 2146 7203</a><br>
-			Skype <a href="skype:lhschou1">lhschou1</a><br>
-			<a href="mailto:lhschou1@gmail.com">lhschou1@gmail.com</a><br>
-			<a href="mailto:lhschou1@gmail.com">Contact me</a>
-		</div>
-		<form class="contact-page__form" method="post" id="contact-form">
-  				<label for="contact-email">E-mail: </label>
-  				<input type="email" id="contact-email" required>
-
-  				<label for="contact-phone">Telephone: </label>
-  				<input type="tel" id="contact-phone">
-
-  				<label for="message">Message: </label>
-  				<textarea maxlength="240" id="message" required></textarea>
-
-  			<input type="submit" value="Send message">
-		</form>
-	</div>
-	<footer class="page-footer">
+		<h1 class="contact-header">CONTACT ME</h1>
+    <div class="contact-wrapper"> 
+      <form class="contact-page__form" method="post" id="contact-form">
+        <input class="form-group" type="text" id="name" placeholder="Name" required>
+        <input class="form-group" type="email" id="email" placeholder="Email" required>
+        <textarea class="form-group" rows="8" id="message" placeholder="Message" required ></textarea>
+        <button class="send-button" id="submit" type="submit" value="Send">
+            <i class="bi bi-send"></i><span class="send-text">Send</span>
+        </button>
+      </form>
+      <div class="direct-contact">
+        <ul class="contact-list">
+          <li class="contact-list_item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span class="contact-text"> Copenhagen, Denmark </span>
+          </li>
+          <li class="contact-list_item">
+            <i class="bi bi-telephone-fill"></i>
+              <span class="contact-text"><a href="tel:+4521467203">+45 2146 7203</a></span>
+          </li>
+          <li class="contact-list_item">
+            <i class="bi bi-envelope-fill"></i>
+              <span class="contact-text"><a href="mailto:lhschou1@gmail.com">lhschou1@gmail.com</a></span>
+          </li>
+        </ul>
+        <hr>
+        <ul class="social-media-list">
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="bi bi-github"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="contact-icon"><i class="bi bi-linkedin"></i></a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+	  </div> 
+  </div>  
+	<!-- <footer class="page-footer">
 		<p>Find me on</p>
 		<div class= "social-media">
 			<img src="img/github_logo.svg" alt="Github" >
 			<img src="img/twitter_logo.svg" alt="Twitter" >
 			<img src="img/linkedin_logo.svg" alt="LinkedIn" >
 		</div>
-	</footer>
+	</footer> -->
 <script src="js/tota11y.min.js"></script>
 </body>
 </html>
